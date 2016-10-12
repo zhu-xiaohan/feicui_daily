@@ -1,0 +1,52 @@
+2016-09-22工作日报
+1.应完成工作
+1.什么是接口？
+2.接口特性？
+3.面向对象特性？
+4.
+2.
+已完成工作
+3.
+1.什么是接口？
+1.接口的关键字“interface”
+2.
+3.
+2.接口特性？
+3.
+面向对象特性？
+封装
+1.
+1.
+public class EncapTest{
+2.
+private String name; private String idNum; private int age;
+3.
+public int getAge(){ return age; }
+4.
+public String getName(){ return name; }
+5.
+public String getIdNum(){ return idNum; }
+6.
+public void setAge( int newAge){ age = newAge; }
+7.
+public void setName(String newName){ name = newName; }
+8.
+public void setIdNum( String newId){ idNum = newId; } }
+9.
+10.封装就是指利用抽象数据类型将数据和基于数据的操作封装在一起，数据被保护在抽象类型的内部， 系统的其他部分只有通过包裹在数据外面的被授权的操作，才能够与这个抽象数据类型交流与交互！
+2.
+继承
+3.
+1.继承实际上是存在于面向对象程序中的两个类之间的关系。当一个类拥有另一个类的所有数据和操作时， 就称这两个类之间具有继承关系！
+4.多态
+1.多态是指一个程序中同名的不同方法共存的情况。面向对象的程序中多态的情况有多种， 可以通过子类对父类方法的覆盖实现多态，也可以利用重载在同一个类中定义多个同名的不同方法！
+5.总结
+1.继承：写出的代码可重复使用
+2.封装：隐藏实现功能的细节
+3.多态：同一个动作呈现的形态
+1.
+未完成工作 无
+2.
+3.未完成原因 无
+4.遇到问题及解析
+1.代码量不够，看PPT文档可以看懂一些，思路不是很清晰，但是自己写时就没有思路了，感觉无从下手，不知道怎么写，感觉越来越懵
