@@ -1,0 +1,962 @@
+2016-09-23工作日报
+1.已完成的工作内容
+*今主要内容是进行测试(100题)，
+2.遇到的问题及解决方法
+1.Given:
+i.public interface Status {
+ii./* insert code here */ int MY_VALUE = 10;
+iii.} Which three are valid on line 12? (Choose three.) A. final B. static C. native D. public E. private F. abstract G. protected
+1.Given:
+i.public class Bar { 11.static void foo(int...x) {
+ii.// insert code here
+iii.}
+iv.} Which two code fragments, inserted independently at line 12, will allow the class to compile? (Choose two.) A. foreach(x) System.out.println(z); B. for(int z : x) System.out.println(z); C. while( x.hasNext()) System.out.println( x.next()); D. for( int i=0; i< x.length; i++ ) System.out.println(x[i]);
+2.Given:
+i.public class Test {
+ii.public static void main(String [] args) {
+iii.int x =5;
+iv.boolean b1 = true;
+v.boolean b2 = false; 16. 17.if((x==4) && !b2)
+vi.System.out.print(”l “);
+vii.System.out.print(”2 “);
+viii.if ((b2 = true) && b1)
+ix.System.out.print(”3 “);
+x.}
+xi.} What is the result? A. 2 B. 3 C. 1 2 D. 2 3 E. 1 2 3 F. Compilation fails. G. Au exceptional is thrown at runtime.
+1.Given:
+i.// some code here
+ii.try {
+iii.// some code here
+iv.} catch (SomeException se) {
+v.// some code here
+vi.} finally {
+vii.// some code here
+viii.} Under which three circumstances will the code on line 37 be executed? (Choose three.) A. The instance gets garbage collected. B. The code on line 33 throws an exception. C. The code on line 35 throws an exception. D. The code on line 31 throws an exception. E. The code on line 33 executes successfully.
+1.Given:
+i.interface Foo {}
+ii.class Alpha implements Foo { }
+iii.class Beta extends Alpha {}
+iv.class Delta extends Beta {
+v.public static void main( String[] args) {
+vi.Beta x = new Beta();
+vii.// insert code here
+viii.}
+ix.} Which code, inserted at line 16, will cause a java.lang.ClassCastException? A. Alpha a = x; B. Foo f= (Delta)x; C. Foo f= (Alpha)x; D. Beta b = (Beta)(Alpha)x;
+1.Assume that country is set for each class. Given:
+i.public class Money {
+ii.private String country, name;
+iii.public getCountry() { return country; } 13.} and:
+iv.class Yen extends Money {
+v.public String getCountry() { return super.country; }
+vi.} 27.
+vii.class Euro extends Money {
+viii.public String getCountry(String timeZone) {
+ix.return super.getCountry();
+x.}
+xi.} Which two are correct? (Choose two.) A. Yen returns correct values. B. Euro returns correct values. C. An exception is thrown at runtime. D. Yen and Euro both return correct values. E. Compilation fails because of an error at line 25. F. Compilation fails because of an error at line 30.
+1.Which Man class properly represents the relationship “Man has a best friend who is a Dog”? A. class Man extends Dog { } B. class Man implements Dog { } C. class Man { private BestFriend dog; } D. class Man { private Dog bestFriend; } E. class Man { private Dog } F. class Man { private BestFriend }
+2.Given:
+i.public class Pass {
+ii.public static void main(String [1 args) {
+iii.int x 5;
+iv.Pass p = new Pass();
+v.p.doStuff(x);
+vi.System.out.print(” main x = “+ x);
+vii.} 20.
+viii.void doStuff(int x) {
+ix.System.out.print(” doStuff x = “+ x++);
+x.}
+xi.} What is the result? A. Compilation fails. B. An exception is thrown at runtime. C. doStuffx = 6 main x = 6 D. doStuffx = 5 main x = 5 E. doStuffx = 5 main x = 6 F. doStuffx = 6 main x = 5
+1.Given:
+i.package com.sun.scjp;
+ii.public class Geodetics {
+iii.public static final double DIAMETER = 12756.32; // kilometers
+iv.} Which two correctly access the DIAMETER member of the Geodetics class? (Choose two.) A. import com.sun.scjp.Geodetics; public class TerraCarta { public double halfway() { return Geodetics.DIAMETER/2.0; } } B. import static com.sun.scjp.Geodetics; public class TerraCarta { public double halfway() { return DIAMETER/2.0; } } C. import static com.sun.scjp.Geodetics. *; public class TerraCarta { public double halfway() { return DIAMETER/2.0; } } D. package com.sun.scjp; public class TerraCarta { public double halfway() { return DIAMETER/2.0; } }
+1.Given:
+i.class Nav{
+ii.public enum Direction { NORTH, SOUTH, EAST, WEST }
+iii.}
+iv.public class Sprite{
+v.// insert code here
+vi.} Which code, inserted at line 14, allows the Sprite class to compile? A. Direction d = NORTH; B. Nav.Direction d = NORTH; C. Direction d = Direction.NORTH; D. Nav.Direction d = Nav.Direction.NORTH;
+1.Given:
+i.interface Foo { int bar(); }
+ii.public class Sprite {
+iii.public int fubar( Foo foo) { return foo.bar(); }
+iv.public void testFoo() {
+v.fubar(
+vi.// insert code here 16.);
+vii.}
+viii.} Which code, inserted at line 15, allows the class Sprite to compile? A. Foo { public int bar() { return 1; } } B. new Foo { public int bar() { return 1; } } C. newFoo() { public int bar(){return 1; } } D. new class Foo { public int bar() { return 1; } }
+1.Click the Exhibit button.
+i.interface Foo {
+ii.int bar();
+iii.} 13.
+iv.public class Beta { 15.
+v.class A implements Foo {
+vi.public int bar() { return 1; }
+vii.} 19.
+viii.public int fubar( Foo foo) { return foo.bar(); } 21.
+ix.public void testFoo() { 23.
+x.class A implements Foo {
+xi.public int bar() { return 2; }
+xii.} 27.
+xiii.System.out.println( fubar( new A()));
+xiv.} 30.
+xv.public static void main( String[] argv) {
+xvi.new Beta().testFoo();
+xvii.}
+xviii.} Which three statements are true? (Choose three.) A. Compilation fails. B. The code compiles and the output is 2. C. If lines 16, 17 and 18 were removed, compilation would fail. D. If lines 24, 25 and 26 were removed, compilation would fail. E. If lines 16, 17 and 18 were removed, the code would compile and the output would be 2. F. If lines 24, 25 and 26 were removed, the code would compile and the output would be 1.
+1.Given:
+i.public interface A {
+ii.String DEFAULT_GREETING = “Hello World”;
+iii.public void method1();
+iv.} A programmer wants to create an interface called B that has A as its parent. Which interface declaration is correct? A. public interface B extends A { } B. public interface B implements A {} C. public interface B instanceOf A {} D. public interface B inheritsFrom A { }
+1.Given:
+i.class TestA {
+ii.public void start() { System.out.println(”TestA”); }
+iii.}
+iv.public class TestB extends TestA {
+v.public void start() { System.out.println(”TestB”); }
+vi.public static void main(String[] args) {
+vii.((TestA)new TestB()).start();
+viii.}
+ix.} What is the result? A. TestA B. TestB C. Compilation fails. D. An exception is thrown at runtime.
+1.Given:
+i.interface TestA { String toString(); }
+ii.public class Test {
+iii.public static void main(String[] args) {
+iv.System.out.println(new TestA() {
+v.public String toString() { return “test”; }
+vi.});
+vii.}
+viii.} What is the result? A. test B. null C. An exception is thrown at runtime. D. Compilation fails because of an error in line 1. E. Compilation fails because of an error in line 4. F. Compilation fails because of an error in line 5.
+1.Given:
+i.public abstract class Shape {
+ii.int x;
+iii.int y;
+iv.public abstract void draw();
+v.public void setAnchor(int x, int y) {
+vi.this.x = x;
+vii.this.y = y;
+viii.}
+ix.} and a class Circle that extends and fully implements the Shape class. Which is correct? A. Shape s = new Shape(); s.setAnchor(10,10); s.draw(); B. Circle c = new Shape(); c.setAnchor(10,10); c.draw(); C. Shape s = new Circle(); s.setAnchor(10,10); s.draw(); D. Shape s = new Circle(); s->setAnchor(10,10); s->draw(); E. Circle c = new Circle(); c.Shape.setAnchor(10,10); c.Shape.draw();
+1.Given:
+i.abstract public class Employee {
+ii.protected abstract double getSalesAmount();
+iii.public double getCommision() {
+iv.return getSalesAmount() * 0.15;
+v.}
+vi.}
+vii.class Sales extends Employee {
+viii.// insert method here
+ix.} Which two methods, inserted independently at line 17, correctly complete the Sales class? (Choose two.) A. double getSalesAmount() { return 1230.45; } B. public double getSalesAmount() { return 1230.45; } C. private double getSalesAmount() { return 1230.45; } D. protected double getSalesAmount() { return 1230.45; }
+1.Given:
+i.interface Data { public void load(); }
+ii.abstract class Info { public abstract void load(); } Which class correctly uses the Data interface and Info class? A. public class Employee extends Info implements Data { public void load() { /do something/ } } B. public class Employee implements Info extends Data { public void load() { /do something/ } } C. public class Employee extends Info implements Data { public void load() { /do something */ } public void Info.load() { /do something/ } } D. public class Employee implements Info extends Data { public void Data.load() { /d something?/ } public void load() { /do something?/ } } E. public class Employee implements Info extends Data { public void load() { /do something */ } public void Info.load(){ /do something/ } } F. public class Employee extends Info implements Data{ public void Data.load() { /do something/ } public void Info.load() { /do something/ } }
+1.Given:
+i.public abstract class Shape {
+ii.private int x;
+iii.private int y;
+iv.public abstract void draw();
+v.public void setAnchor(int x, int y) {
+vi.this.x = x;
+vii.this.y = y;
+viii.}
+ix.} Which two classes use the Shape class correctly? (Choose two.) A. public class Circle implements Shape { private int radius; } B. public abstract class Circle extends Shape { private int radius; } C. public class Circle extends Shape { private int radius; public void draw(); } D. public abstract class Circle implements Shape { private int radius; public void draw(); } E. public class Circle extends Shape { private int radius; public void draw() {/* code here */} } F. public abstract class Circle implements Shape { private int radius; public void draw() { / code here */ } }
+1.Which two classes correctly implement both the java.lang.Runnable and the java.lang.Clonable interfaces? (Choose two.) A. public class Session implements Runnable, Clonable { public void run(); public Object clone(); } B. public class Session extends Runnable, Clonable { public void run() { / do something?/ } public Object clone() { / make a copy */ } } C. public class Session implements Runnable, Clonable { public void run() { / do something */ } public Object clone() { /?make a copy?/ } } D. public abstract class Session implements Runnable, Clonable { public void run() { / do something */ } public Object clone() { /make a copy */ } } E. public class Session implements Runnable, implements Clonable { public void run() { / do something */ } public Object clone() { / make a copy */ } }
+2.Click the Exhibit button.
+i.public class GoTest {
+ii.public static void main(String[] args) {
+iii.Sente a = new Sente(); a.go();
+iv.Goban b = new Goban(); b.go();
+v.Stone c = new Stone(); c.go();
+vi.}
+vii.} 8.
+viii.class Sente implements Go {
+ix.public void go() { System.out.println(”go in Sente.”); }
+x.} 12.
+xi.class Goban extends Sente {
+xii.public void go() { System.out.println(”go in Goban”); }
+xiii.} 16.
+xiv.class Stone extends Goban implements Go { } 18.
+xv.interface Go { public void go(); } What is the result? A. go in Goban go in Sente go in Sente B. go in Sente go in Sente go in Goban C. go in Sente go in Goban go in Goban D. go in Goban go in Goban go in Sente E. Compilation fails because of an error in line 17.
+1.Click the Exhibit button.
+i.public class Test {
+ii.int x= 12;
+iii.public void method(int x) {
+iv.x+=x;
+v.System.out.println(x);
+vi.}
+vii.} Given:
+viii.Test t = new Test();
+ix.t.method(5); What is the output from line 5 of the Test class? A. 5 B. 10 C. 12 D. 17 E. 24
+1.Given:
+i.int []x= {1, 2,3,4, 5}; 56.int y[] =x;
+ii.System.out.println(y[2]); Which is true? A. Line 57 will print the value 2. B. Line 57 will print the value 3. C. Compilation will fail because of an error in line 55. D. Compilation will fail because of an error in line 56.
+1.Given:
+i.String #name = “Jane Doe”; 36.int$age=24;
+ii.Double_height = 123.5;
+iii.double~temp = 37.5; Which two are true? (Choose two.) A. Line 35 will not compile. B. Line 36 will not compile. C. Line 37 will not compile. D. Line 38 will not compile.
+1.Which two code fragments correctly create and initialize a static array of int elements? (Choose two.) A. static final int[] a = { 100,200 }; B. static final int[] a; static { a=new int[2]; a[0]=100; a[1]=200; } C. static final int[] a = new int[2] { 100,200 }; D. static final int[] a; static void init() { a = new int[3]; a[0]=100; a[1]=200; } Answer: AB
+2.Given:
+i.public static void main(String[] args) {
+ii.Object obj =new int[] { 1,2,3 };
+iii.int[] someArray = (int[])obj;
+iv.for (int i: someArray) System.out.print(i +“ “)
+v.} ‘What is the result? A. 1 2 3 B. Compilation fails because of an error in line 12. C. Compilation fails because of an error in line 13. D. Compilation fails because of an error in line 14. E. A ClassCastException is thrown at runtime.
+1.Given:
+i.class Foo {
+ii.static void alpha() { /* more code here */ }
+iii.void beta() { /* more code here */ }
+iv.} Which two are true? (Choose two.) A. Foo.beta() is a valid invocation of beta(). B. Foo.alpha() is a valid invocation of alpha(). C. Method beta() can directly call method alpha(). D. Method alpha() can directly call method beta().
+1.A programmer needs to create a logging method that can accept an arbitrary number of arguments. For example, it may be called in these ways: logIt(”log message 1 “); logIt(”log message2”,”log message3”); logIt(”log message4”, “log message5”, “log message6); Which declaration satisfies this requirement? A. public void logIt(String * msgs) B. public void logIt(String [] msgs) C. public void logIt(String... msgs) D. public void logIt(String msg1, String msg2, String msg3)
+2.A programmer is designing a class to encapsulate the information about an inventory item. A JavaBeans component is needed to do this. The Inventoryltem class has private instance variables to store the item information:
+i.private int itemId;
+ii.private String name;
+iii.private String description; Which method signature follows the JavaBeans naming standards for modifying the itemld instance variable? A. itemID(int itemId) B. update(int itemId) C. setItemId(int itemId) D. mutateItemId(int itemId) E. updateItemID(int itemId)
+1.Click the Exhibit button.
+i.public class A { 2.
+ii.private int counter = 0; 4.
+iii.public static int getInstanceCount() {
+iv.return counter;
+v.} 8.
+vi.public A() {
+vii.counter++;
+viii.} 12.
+ix.} Given this code from Class B: 25.A a1 =new A();
+x.A a2 =new A();
+xi.A a3 =new A();
+xii.System.out.printIn(A.getInstanceCount() ); What is the result? A. Compilation of class A fails. B. Line 28 prints the value 3 to System.out. C. Line 28 prints the value 1 to System.out. D. A runtime error occurs when line 25 executes. E. Compilation fails because of an error on line 28.
+1.A JavaBeans component has the following field:
+i.private boolean enabled; Which two pairs of method declarations follow the JavaBeans standard for accessing this field? (Choose two.) A. public void setEnabled( boolean enabled) public boolean getEnabled() B. public void setEnabled( boolean enabled) public void isEnabled() C. public void setEnabled( boolean enabled) public boolean isEnabled() D. public boolean setEnabled( boolean enabled) public boolean getEnabled() Answer: AC
+1.Given:
+i.class One {
+ii.public One foo() { return this; }
+iii.}
+iv.class Two extends One {
+v.public One foo() { return this; }
+vi.}
+vii.class Three extends Two {
+viii.// insert method here
+ix.} Which two methods, inserted individually, correctly complete the Three class? (Choose two.) A. public void foo() { } B. public int foo() { return 3; } C. public Two foo() { return this; } D. public One foo() { return this; } E. public Object foo() { return this; }
+1.Given:
+i.class One {
+ii.void foo() {}
+iii.}
+iv.class Two extends One {
+v.//insert method here
+vi.} Which three methods, inserted individually at line 14, will correctly complete class Two? (Choose three.) A. int foo() { /* more code here?/ } B. void foo() { /?more code here?/ } C. public void foo() { /?more code here?/ } D. private void foo() { /more code here?/ } E. protected void foo() { /?more code here */ }
+1.Click the Exhibit button.
+i.public interface A {
+ii.public void doSomething(String thing);
+iii.}
+iv.public class AImpl implements A {
+v.public void doSomething(String msg) { }
+vi.}
+vii.public class B {
+viii.public A doit() {
+ix.// more code here
+x.} 5.
+xi.public String execute() {
+xii.// more code here
+xiii.}
+xiv.}
+xv.public class C extends B {
+xvi.public AImpl doit() {
+xvii.// more code here
+xviii.} 5.
+xix.public Object execute() {
+xx.// more code here
+xxi.}
+xxii.} Which statement is true about the classes and interfaces in the exhibit? A. Compilation will succeed for all classes and interfaces. B. Compilation of class C will fail because of an error in line 2. C. Compilation of class C will fail because of an error in line 6. D. Compilation of class AImpl will fail because of an error in line 2.
+1.Click the Exhibit button.
+i.public class A {
+ii.public String doit(int x, int y) {
+iii.return “a”;
+iv.} 5.
+v.public String doit(int... vals) {
+vi.return “b”;
+vii.}
+viii.} Given:
+ix.A a=new A();
+x.System.out.println(a.doit(4, 5)); What is the result? A. Line 26 prints “a” to System.out. B. Line 26 prints ‘b” to System.out. C. An exception is thrown at line 26 at runtime. D. Compilation of class A will fail due to an error in line 6.
+1.Given:
+i.public class A {
+ii.public void doit() {
+iii.}
+iv.public String doit() {
+v.return “a”;
+vi.}
+vii.public double doit(int x) {
+viii.return 1.0;
+ix.} 10.} What is the result? A. An exception is thrown at runtime. B. Compilation fails because of an error in line 7. C. Compilation fails because of an error in line 4. D. Compilation succeeds and no runtime errors with class A occur.
+1.Given:
+i.class Line {
+ii.public static class Point { }
+iii.} 13.
+iv.class Triangle {
+v.// insert code here
+vi.} Which code, inserted at line 15, creates an instance of the Point class defined in Line? A. Point p = new Point(); B. Line.Point p = new Line.Point(); C. The Point class cannot be instatiated at line 15. D. Line 1 = new Line() ; 1.Point p = new 1.Point();
+1.Given:
+i.class Line {
+ii.public class Point { public int x,y; }
+iii.public Point getPoint() { return new Point(); }
+iv.}
+v.class Triangle {
+vi.public Triangle() {
+vii.// insert code here
+viii.}
+ix.} Which code, inserted at line 16, correctly retrieves a local instance of a Point object? A. Point p = Line.getPoint(); B. Line.Point p = Line.getPoint(); C. Point p = (new Line()).getPoint(); D. Line.Point p = (new Line()).getPoint();
+1.Given:
+i.class One {
+ii.public One() { System.out.print(1); }
+iii.}
+iv.class Two extends One {
+v.public Two() { System.out.print(2); }
+vi.}
+vii.class Three extends Two {
+viii.public Three() { System.out.print(3); }
+ix.}
+x.public class Numbers{
+xi.public static void main( String[] argv) { new Three(); }
+xii.} What is the result when this code is executed? A. 1 B. 3 C. 123 D. 321 E. The code rims with no output.
+1.Click the Exhibit button.
+i.class Person {
+ii.String name = “No name’;
+iii.public Person(String nm) { name = nm; }
+iv.} 15.
+v.class Employee extends Person {
+vi.String emplD = “0000”;
+vii.public Employee(String id) { empID = id; }
+viii.} 20.
+ix.public class EmployeeTest {
+x.public static void main(String[] args) {
+xi.Employee e = new Employee(”4321”);
+xii.System.out.println(e.empID);
+xiii.}
+xiv.} What is the result? A. 4321 B. 0000 C. An exception is thrown at runtime. D. Compilation fails because of an error in line 18.
+1.Given:
+i.public class Plant {
+ii.private String name;
+iii.public Plant(String name) { this.name = name; }
+iv.public String getName() { return name; }
+v.}
+vi.public class Tree extends Plant {
+vii.public void growFruit() { }
+viii.public void dropLeaves() { }
+ix.} Which is true? A. The code will compile without changes. B. The code will compile if public Tree() { Plant(); } is added to the Tree class. C. The code will compile if public Plant() { Tree(); } is added to the Plant class. D. The code will compile if public Plant() { this(”fern”); } is added to the Plant class. E. The code will compile if public Plant() { Plant(”fern”); } is added to the Plant class.
+1.public class Bootchy {
+i.int bootch;
+ii.String snootch; 14.
+iii.public Bootchy() {
+iv.this(”snootchy”);
+v.System.out.print(”first “);
+vi.} 19.
+vii.public Bootchy(String snootch) {
+viii.this(420, “snootchy”);
+ix.System.out.print(”second “);
+x.} 24.
+xi.public Bootchy(int bootch, String snootch) {
+xii.this.bootch = bootch;
+xiii.this.snootch = snootch;
+xiv.System.out.print(”third “);
+xv.} 30.
+xvi.public static void main(String[] args) {
+xvii.Bootchy b = new Bootchy();
+xviii.System.out.print(b.snootch +“ “ + b.bootch);
+xix.}
+xx.} What is the result? A. snootchy 420 third second first B. snootchy 420 first second third C. first second third snootchy 420 D. third second first siiootchy 420 E. third first second snootchy 420 F. first second first third snootchy 420
+1.Given:
+i.public class Test {
+ii.public enum Dogs {collie, harrier};
+iii.public static void main(String [] args) {
+iv.Dogs myDog = Dogs.collie;
+v.switch (myDog) {
+vi.case collie:
+vii.System.out.print(”collie “);
+viii.case harrier:
+ix.System.out.print(”harrier “);
+x.}
+xi.}
+xii.} What is the result? A. collie B. harrier C. Compilation fails. D. collie harrier E. An exception is thrown at runtime.
+1.Given:
+i.public void testIfA() {
+ii.if(testIfB(”True”)) {
+iii.System.out.println(”True”);
+iv.} else {
+v.System.out.println(”Not true”);
+vi.}
+vii.}
+viii.public Boolean testIfB(String str) {
+ix.return Boolean.valueOf(str);
+x.} What is the result when method testIfA is invoked? A. True B. Not true C. An exception is thrown at runtime. D. Compilation fails because of an error at line 12. E. Compilation fails because of an error at line 19.
+1.Given:
+i.public static void main(String[] args) {
+ii.Integer i = uew Integer(1) + new Integer(2);
+iii.switch(i) {
+iv.case 3: System.out.println(”three”); break;
+v.default: System.out.println(”other”); break;
+vi.}
+vii.} ‘What is the result? A. three B. other C. An exception is thrown at runtime. D. Compilation fails because of an error on line 12. E. Compilation fails because of an error on line 13. F. Compilation fails because of an error on line 15.
+1.Given:
+i.public static void main(String[] args) {
+ii.String str = “null’;
+iii.if (str == null) {
+iv.System.out.println(”null”);
+v.} else (str.length() == 0) {
+vi.System.out.println(”zero”);
+vii.} else {
+viii.System.out.println(”some”);
+ix.}
+x.} ‘What is the result? A. null B. zero C. some D. Compilation fails. E. An exception is thrown at runtime.
+1.Given:
+i.Float pi = new Float(3.14f); 12.if(pi>3) {
+ii.System.out.print(”pi is bigger than 3. “);
+iii.}
+iv.else {
+v.System.out.print(”pi is not bigger than 3. “);
+vi.}
+vii.finally {
+viii.System.out.println(”Have a nice day.”);
+ix.} ‘What is the result? A. Compilation fails. B. pi is bigger than 3. C. An exception occurs at runtime. D. pi is bigger than 3. Have a nice day. E. pi is not bigger than 3. Have a nice day.
+1.Given: 10.int x=0; 11.int y 10;
+i.do { l3. y--;
+ii.++x;
+iii.} while (x < 5);
+iv.System.out.print(x + “,“ + y); What is the result? A. 5,6 B. 5,5 C. 6,5 D. 6,6
+1.Given: 25.intx=12;
+i.while (x < 10) {
+ii.x--;
+iii.}
+iv.System.out.print(x); What is the result? A. 0 B. 10 C. 12 D. Line 29 will never be reached
+1.Given:
+i.int x= 10;
+ii.do {
+iii.x--;
+iv.} while(x< 10); How many times will line 37 be executed? A. ten times B. zero times C. one to me times D. more than ten times
+1.Give:
+i.public static Iterator reverse(List list) {
+ii.Collections.reverse(list);
+iii.return list.iterator();
+iv.}
+v.public static void main(String[] args) {
+vi.List list = new ArrayList();
+vii.list.add(” 1”); list.add(”2”); list.add(”3”);
+viii.for (Object obj: reverse(list))
+ix.System.out.print(obj + “,”);
+x.} ‘What is the result? A. 3,2, 1, B. 1, 2, 3, C. Compilation fails. D. The code runs with no output. E. An exception is thrown at runtime.
+1.Given:
+i.public static Collection get() {
+ii.Collection sorted = new LinkedList();
+iii.sorted.add(’B”); sorted.add(”C”); sorted.add(”A”);
+iv.return sorted;
+v.}
+vi.public static void main(String[] args) {
+vii.for (Object obj: get()) {
+viii.System.out.print(obj + “, “);
+ix.}
+x.} What is the result? A. A, B, C, B. B, C, A, C. Compilation fails. D. The code runs with no output. E. An exception is thrown at runtime.
+1.Given:
+i.public static void main(String[] args) {
+ii.for (int i=0;i<= 10;i++){
+iii.if( i>6) break;
+iv.}
+v.System.out.println(i);
+vi.} What is the result? A. 6 B. 7 C. 10 D. 11 E. Compilation fails. F. An exception is thrown at runtime.
+1.Given:
+i.public class test {
+ii.public static void main(String [] a) {
+iii.assert a.length == 1;
+iv.}
+v.} Which two will produce an AssertionError? (Choose two.) A. java test B. java -ea test C. java test file1 D. java -ea test file1 E. java -ea test file1 file2 F. java -ea:test test file1
+1.Given:
+i.public class AssertStuff { 13.
+ii.public static void main(String [] args) {
+iii.int x= 5;
+iv.int y= 7; 17.
+v.assert (x> y): “stuff”;
+vi.System.out.println(”passed”);
+vii.}
+viii.} And these command line invocations: java AssertStuff java -ea AssertStuff What is the result? A. passed stuff B. stuff passed C. passed An AssertionError is thrown with the word “stuff” added to the stack trace. D. passed An AssertionError is thrown without the word “stuff” added to the stack trace. E. passed An AssertionException is thrown with the word “stuff” added to the stack trace. F. passed An AssertionException is thrown without the word “stuff” added to the stack trace.
+1.Click the Exhibit button.
+i.public class Test { 2.
+ii.public static void main(String [] args) {
+iii.boolean assert = true;
+iv.if(assert) {
+v.System.out.println(”assert is true”);
+vi.}
+vii.} 9.
+viii.} Given: javac -source 1.3 Test.java What is the result? A. Compilation fails. B. Compilation succeeds with errors. C. Compilation succeeds with warnings. D. Compilation succeeds without warnings or errors.
+1.Click the Exhibit button. SomeException:
+i.public class SomeException {
+ii.} Class A:
+iii.public class A {
+iv.public void doSomething() { }
+v.} Class B:
+vi.public class B extends A {
+vii.public void doSomething() throws SomeException { }
+viii.} Which is true about the two classes? A. Compilation of both classes will fail. B. Compilation of both classes will succeed. C. Compilation of class A will fail. Compilation of class B will succeed. D. Compilation of class B will fail. Compilation of class A will succeed.
+1.Click the Exhibit button. Class TestException
+i.public class TestException extends Exception {
+ii.} Class A:
+iii.public class A { 2.
+iv.public String sayHello(String name) throws TestException { 4.
+v.if(name == null) {
+vi.throw new TestException();
+vii.} 8.
+viii.return “Hello “+ name;
+ix.} 11.
+x.} A programmer wants to use this code in an application:
+xi.A a=new A();
+xii.System.out.println(a.sayHello(”John”)); Which two are true? (Choose two.) A. Class A will not compile. B. Line 46 can throw the unchecked exception TestException. C. Line 45 can throw the unchecked exception TestException. D. Line 46 will compile if the enclosing method throws a TestException. E. Line 46 will compile if enclosed in a try block, where TestException is caught.
+1.Click the Exhibit button.
+i.public class ClassA {
+ii.public void methodA() {
+iii.ClassB classB = new ClassB();
+iv.classB.getValue();
+v.}
+vi.} And:
+vii.class ClassB {
+viii.public ClassC classC; 22.
+ix.public String getValue() {
+x.return classC.getValue();
+xi.}
+xii.} And:
+xiii.class ClassC {
+xiv.public String value; 32.
+xv.public String getValue() {
+xvi.value = “ClassB”;
+xvii.return value;
+xviii.}
+xix.} Given: ClassA a = new ClassA(); a.methodA(); What is the result? A. Compilation fails. B. ClassC is displayed. C. The code runs with no output. D. An exception is thrown at runtime.
+1.Given:
+i.public class Foo {
+ii.static int[] a;
+iii.static { a[0]=2; }
+iv.public static void main( String[] args) {}
+v.} Which exception or error will be thrown when a programmer attempts to run this code? A. java.lang. StackOverflowError B. java.lang.IllegalStateException C. java.lang.ExceptionlnlnitializerError D. java.lang.ArraylndexOutOfBoundsException
+1.Given:
+i.public class ClassA {
+ii.public void count(int i) {
+iii.count(++i);
+iv.}
+v.} And:
+vi.ClassA a = new ClassA();
+vii.a.count(3); Which exception or error should be thrown by the virtual machine? A. StackOverflowError B. NullPointerException C. NumberFormatException D. IllegalArgumentException E. ExceptionlnlnitializerError
+1.Given:
+i.public class Boxer1 {
+ii.Integer i;
+iii.int x;
+iv.public Boxer1(int y) {
+v.x=i+y;
+vi.System.out.println(x);
+vii.}
+viii.public static void main(String[] args) {
+ix.new Boxer1(new Integer(4));
+x.}
+xi.} What is the result? A. The value “4” is printed at the command line. B. Compilation fails because of an error in line 5. C. Compilation fails because of an error in line 9. D. A NullPointerException occurs at runtime. E. A NumberFormatException occurs at runtime. F. An IllegalStateException occurs at runtime.
+1.Given:
+i.public class TestString 1 {
+ii.public static void main(String[] args) {
+iii.String str = “420”;
+iv.str += 42;
+v.System.out.print(str);
+vi.}
+vii.} What is the output? A. 42 B. 420 C. 462 D. 42042 E. Compilation fails. F. An exception is thrown at runtime.
+1.Given:
+i.class Converter {
+ii.public static void main(String[] args) {
+iii.Integer i = args[0];
+iv.int j = 12;
+v.System.out.println(”It is “ + (j==i) + “that j==i.”);
+vi.}
+vii.} What is the result when the programmer attempts to compile the code and run it with the command java Converter 12? A. It is true that j==i. B. It is false that j==i. C. An exception is thrown at runtime. D. Compilation fails because of an error in line 13.
+1.Given this method in a class:
+i.public String toString() {
+ii.StringBuffer buffer = new StringBuffer();
+iii.buffer.append(’<’);
+iv.buffer.append(this.name);
+v.buffer.append(’>’);
+vi.return buffer.toString();
+vii.} Which is true? A. This code is NOT thread-safe. B. The programmer can replace StringBuffer with StringBuilder with no other changes. C. This code will perform well and converting the code to use StringBuilder will not enhance the performance. D. This code will perform poorly. For better performance, the code should be rewritten: return “<“+ this.name + “>”;
+1.Given:
+i.public String makinStrings() {
+ii.String s = “Fred”;
+iii.s = s + “47”;
+iv.s = s.substring(2, 5);
+v.s = s.toUpperCase();
+vi.return s.toString();
+vii.} How many String objects will be created when this method is invoked? A. 1 B. 2 C. 3 D. 4 E. 5 F. 6
+1.Given:
+i.public class TestString3 {
+ii.public static void main(String[] args) {
+iii.// insert code here
+iv.System.out.println(s);
+v.}
+vi.} Which two code fragments, inserted independently at line 3, generate the output 4247? (Choose two.) A. String s = “123456789”; s = (s-”123”).replace(1,3,”24”) - “89”; B. StringBuffer s = new StringBuffer(”123456789”); s.delete(0,3).replace( 1,3, “24”).delete(4,6); C. StringBuffer s = new StringBuffer(”123456789”); s.substring(3,6).delete( 1 ,3).insert( 1, “24”); D. StringBuilder s = new StringBuilder(”123456789”); s.substring(3,6).delete( 1 ,2).insert( 1, “24”); E. StringBuilder s = new StringBuilder(”123456789”); s.delete(0,3).delete( 1 ,3).delete(2,5).insert( 1, “24”);
+1.Given:
+i.public class Yikes { 12.
+ii.public static void go(Long n) {System.out.println(”Long “);}
+iii.public static void go(Short n) {System.out.println(”Short “);}
+iv.public static void go(int n) {System.out.println(”int “);}
+v.public static void main(String [] args) {
+vi.short y= 6;
+vii.long z= 7;
+viii.go(y);
+ix.go(z);
+x.}
+xi.} What is the result? A. int Long B. Short Long C. Compilation fails. D. An exception is thrown at runtime.
+1.Given:
+i.public class Wow {
+ii.public static void go(short n) {System.out.println(”short”); }
+iii.public static void go(Short n) {System.out.println(”SHORT”);}
+iv.public static void go(Long n) {System.out.println(” LONG”); }
+v.public static void main(String [] args) {
+vi.Short y= 6; 18.int z=7;
+vii.go(y);
+viii.go(z);
+ix.}
+x.} What is the result? A. short LONG B. SHORT LONG C. Compilation fails. D. An exception is thrown at runtime.
+1.Given:
+i.class MakeFile {
+ii.public static void main(String[] args) {
+iii.try {
+iv.File directory = new File(”d”);
+v.File file = new File(directory,”f”);
+vi.if(!file.exists()) {
+vii.file.createNewFile();
+viii.}
+ix.} catch (IOException e) {
+x.e.printStackTrace
+xi.}
+xii.}
+xiii.} The current directory does NOT contain a directory named “d.” Which three are true? (Choose three.) A. Line 16 is never executed. B. An exception is thrown at runtime. C. Line 13 creates a File object named “d.” D. Line 14 creates a File object named “f.’ E. Line 13 creates a directory named “d” in the file system. F. Line 16 creates a directory named “d” and a file ‘f’ within it in the file system. G. Line 14 creates a file named ‘f’ inside of the directory named “d” in the file system.
+1.When comparing java.io.BufferedWriter to java.io.FileWriter, which capability exists as a method in only one of the two? A. closing the stream B. flushing the stream C. writing to the stream D. marking a location in the stream E. writing a line separator to the stream
+2.Given:
+i.class SuperClass {
+ii.public A getA() {
+iii.return new A();
+iv.}
+v.}
+vi.class SubClass extends SuperClass {
+vii.public B getA() {
+viii.return new B();
+ix.}
+x.} Which is true?
+1.Given:
+i.interface A { public void aMethod(); }
+ii.interface B { public void bMethod(); }
+iii.interface C extends A,B { public void cMethod(); }
+iv.class D implements B {
+v.public void bMethod() { }
+vi.}
+vii.class E extends D implements C {
+viii.public void aMethod() { }
+ix.public void bMethod() { }
+x.public void cMethod() { }
+xi.} What is the result? A. Compilation fails because of an error in line 3. B. Compilation fails because of an error in line 7. C. Compilation fails because of an error in line 9. D. If you define D e = new E(), then e.bMethod() invokes the version of bMethod() defined in Line 5. E. If you define D e = (D)(new E()), then e.bMethod() invokes the version of bMethod() defined in Line 5. F. If you define D e = (D)(new E()), then e.bMethod() invokes the version of bMethod() defined in Line 9.
+1.Given:
+i.interface A { public int getValue() }
+ii.class B implements A {
+iii.public int getValue() { return 1; }
+iv.}
+v.class C extends B {
+vi.// insert code here
+vii.} Which three code fragments, inserted individually at line 15, make use of polymorphism? (Choose three.) A. public void add(C c) { c.getValue(); } B. public void add(B b) { b.getValue(); } C. public void add(A a) { a.getValue(); } D. public void add(A a, B b) { a.getValue(); } E. public void add(C c1, C c2) { c1.getValue(); }
+1.Given:
+i.class ClassA {
+ii.public int numberOfinstances;
+iii.protected ClassA(int numberOfinstances) {
+iv.this.numberOflnstances = numberOfinstances;
+v.}
+vi.}
+vii.public class ExtendedA extends ClassA {
+viii.private ExtendedA(int numberOfinstances) {
+ix.super(numberOflnstances);
+x.}
+xi.public static void main(String[] args) {
+xii.ExtendedA ext = new ExtendedA(420);
+xiii.System.out.print(ext.numberOflnstances);
+xiv.}
+xv.} Which is true? A. 420 is the output. B. An exception is thrown at runtime. C. All constructors must be declared public. D. Constructors CANNOT use the private modifier. E. Constructors CANNOT use the protected modifier.
+1.Given:
+i.public class Base {
+ii.public static final String FOO = “foo”;
+iii.public static void main(String[] args) {
+iv.Base b = new Base();
+v.Sub s = new Sub();
+vi.System.out.print(Base.FOO);
+vii.System.out.print(Sub.FOO);
+viii.System.out.print(b.FOO);
+ix.System.out.print(s.FOO);
+x.System.out.print(((Base)s).FOO);
+xi.} }
+xii.class Sub extends Base {public static final String FOO=bar;} What is the result? A. foofoofoofoofoo B. foobarfoobarbar C. foobarfoofoofoo D. foobarfoobarfoo E. barbarbarbarbar F. foofoofoobarbar G. foofoofoobarfoo
+1.Which three statements are true? (Choose three.) A. A final method in class X can be abstract if and only if X is abstract. B. A protected method in class X can be overridden by any subclass of X. C. A private static method can be called only within other static methods in class X. D. A non-static public final method in class X can be overridden in any subclass of X. E. A public static method in class X can be called by a subclass of X without explicitly referencing the class X. F. A method with the same signature as a private final method in class X can be implemented in a subclass of X. G. A protected method in class X can be overridden by a subclass of A only if the subclass is in the same package as X.
+2.Given:
+i.class Super {
+ii.private int a;
+iii.protected Super(int a) { this.a = a; }
+iv.} .....
+v.class Sub extends Super {
+vi.public Sub(int a) { super(a); }
+vii.public Sub() { this.a= 5; }
+viii.} Which two, independently, will allow Sub to compile? (Choose two.) A. Change line 2 to: public int a; B. Change line 2 to: protected int a; C. Change line 13 to: public Sub() { this(5); } D. Change line 13 to: public Sub() { super(5); } E. Change line 13 to: public Sub() { super(a); }
+1.Click the Exhibit button.
+i.public class SimpleCalc {
+ii.public int value;
+iii.public void calculate() { value += 7; }
+iv.} And:
+v.public class MultiCalc extends SimpleCalc {
+vi.public void calculate() { value -= 3; }
+vii.public void calculate(int multiplier) {
+viii.calculate();
+ix.super.calculate();
+x.value *=multiplier;
+xi.}
+xii.public static void main(String[] args) {
+xiii.MultiCalc calculator = new MultiCalc();
+xiv.calculator.calculate(2);
+xv.System.out.println(”Value is: “+ calculator.value);
+xvi.}
+xvii.} What is the result? A. Value is: 8 B. Compilation fails. C. Value is: 12 D. Value is: -12 E. The code runs with no output. F. An exception is thrown at runtime.
+1.Given:
+i.public class Hello {
+ii.String title;
+iii.int value;
+iv.public Hello() {
+v.title += “ World”;
+vi.}
+vii.public Hello(int value) {
+viii.this.value = value;
+ix.title = “Hello”;
+x.Hello();
+xi.}
+xii.} and:
+xiii.Hello c = new Hello(5);
+xiv.System.out.println(c.title); What is the result? A. Hello B. Hello World C. Compilation fails. D. Hello World 5 E. The code runs with no output. F. An exception is thrown at runtime.
+1.Click the Exhibit button.
+i.public class Car {
+ii.private int wheelCount;
+iii.private String vin;
+iv.public Car(String vin) {
+v.this.vin = vin;
+vi.this.wheelCount = 4;
+vii.}
+viii.public String drive() {
+ix.return “zoom-zoom”;
+x.}
+xi.public String getInfo() {
+xii.return “VIN: “+ vin + “wheels: “+ wheelCount;
+xiii.}
+xiv.} And:
+xv.public class MeGo extends Car {
+xvi.public MeGo(String vin) {
+xvii.this.wheelCount = 3;
+xviii.}
+xix.} What two must the programmer do to correct the compilation errors? (Choose two.) A. insert a call to this() in the Car constructor B. insert a call to this() in the MeGo constructor C. insert a call to super() in the MeGo constructor D. insert a call to super(vin) in the MeGo constructor E. change the wheelCount variable in Car to protected F. change line 3 in the MeGo class to super.wheelCount = 3;
+1.Click the Exhibit button.
+i.public class Employee {
+ii.String name;
+iii.double baseSalary;
+iv.Employee(String name, double baseSalary) {
+v.this.name = name;
+vi.this.baseSalary = baseSalary;
+vii.}
+viii.} And:
+ix.public class Salesperson extends Employee {
+x.double commission;
+xi.public Salesperson(String name, double baseSalary,
+xii.double commission) {
+xiii.// insert code here
+xiv.}
+xv.} Which code, inserted at line 7, completes the Salesperson constructor? A. this.commission = commission; B. superb(); commission = commission; C. this.commission = commission; superb(); D. super(name, baseSalary); this.commission = commission; E. super(); this.commission = commission; F. this.commission = commission; super(name, baseSalary);
+1.Given:
+i.public class Blip {
+ii.protected int blipvert(int x) { return 0; }
+iii.}
+iv.class Vert extends Blip {
+v.// insert code here
+vi.} Which five methods, inserted independently at line 5, will compile? (Choose five.) A. public int blipvert(int x) { return 0; } B. private int blipvert(int x) { return 0; } C. private int blipvert(long x) { return 0; } D. protected long blipvert(int x) { return 0; } E. protected int blipvert(long x) { return 0; } F. protected long blipvert(long x) { return 0; } G. protected long blipvert(int x, int y) { return 0; }
+1.Given:
+i.public class Foo {
+ii.public int a;
+iii.public Foo() { a = 3; }
+iv.public void addFive() { a += 5; }
+v.} and:
+vi.public class Bar extends Foo {
+vii.public int a;
+viii.public Bar() { a = 8; }
+ix.public void addFive() { this.a +=5; }
+x.} invoked with:
+xi.Foo foo = new Bar();
+xii.foo.addFive();
+xiii.System.out.println(”Value: “+ foo.a); What is the result? A. Value: 3 B. Value: 8 C. Value: 13 D. Compilation fails. E. The code runs with no output. F. An exception is thrown at runtime.
+1.Given:
+i.public class SuperCaic {
+ii.protected static int multiply(int a, int b) { return a * b; }
+iii.} and:
+iv.public class SubCalc extends SuperCalc {
+v.public static int multiply(int a, int b) {
+vi.int c = super.multiply(a, b);
+vii.return c;
+viii.}
+ix.} and:
+x.SubCalc sc = new SubCalc();
+xi.System.out.println(sc.multiply(3,4));
+xii.System.out.println(SubCalc.multiply(2,2)); What is the result? A. 12 4 B. The code runs with no output. C. An exception is thrown at runtime. D. Compilation fails because of an error in line 21. E. Compilation fails because of an error in line 22. F. Compilation fails because of an error in line 31.
+1.Which four are true? (Choose four.) A. Has-a relationships should never be encapsulated. B. Has-a relationships should be implemented using inheritance. C. Has-a relationships can be implemented using instance variables. D. Is-a relationships can be implemented using the extends keyword. E. Is-a relationships can be implemented using the implements keyword. F. The relationship between Movie and Actress is an example of an is-a relationship. G. An array or a collection can be used to implement a one-to-many has-a relationship.
+2.Which two are true about has-a and is-a relationships? (Choose two.) A. Inheritance represents an is-a relationship. B. Inheritance represents a has-a relationship. C. Interfaces must be used when creating a has-a relationship. D. Instance variables can be used when creating a has-a relationship.
+3.Given:
+i.interface Jumper { public void jump(); } ......
+ii.class Animal {} ......
+iii.class Dog extends Animal {
+iv.Tail tail;
+v.} ......
+vi.class Beagle extends Dog implements Jumper {
+vii.public void jump() { }
+viii.} .......
+ix.class Cat implements Jumper {
+x.public void jump() { }
+xi.} Which three are true? (Choose three.) A. Cat is-a Animal B. Cat is-a Jumper C. Dog is-a Animal D. Dog is-a Jumper E. Cat has-a Animal F. Beagle has-a Tail G. Beagle has-a Jumper
+1.Given classes defined in two different files:
+i.package util;
+ii.public class BitUtils {
+iii.private static void process(byte[] b) { }
+iv.}
+v.package app;
+vi.public class SomeApp {
+vii.public static void main(String[] args) {
+viii.byte[] bytes = new byte[256];
+ix.// insert code here
+x.}
+xi.} What is required at line 5 in class SomeApp to use the process method of BitUtils? A. process(bytes); B. BitUtils.process(bytes); C. app.BitUtils.process(bytes); D. util.BitUtils.process(bytes); E. import util.BitUtils. *; process(bytes); F. SomeApp cannot use the process method in BitUtils.
+1.Given classes defined in two different files:
+i.package packageA;
+ii.public class Message {
+iii.String getText() { return “text”; }
+iv.} and:
+v.package packageB;
+vi.public class XMLMessage extends packageA.Message {
+vii.String getText() { return “text”; }
+viii.public static void main(String[] args) {
+ix.System.out.println(new XMLMessage().getText());
+x.}
+xi.} What is the result of executing XMLMessage.main? A. text B. text C. An exception is thrown at runtime. D. Compilation fails because of an error in line 2 of XMLMessage. E. Compilation fails because of an error in line 3 of XMLMessage.
+1.Given a file GrizzlyBear.java:
+i.package animals.mammals; 2.
+ii.public class GrizzlyBear extends Bear {
+iii.void hunt() {
+iv.Salmon s = findSalmon();
+v.s.consume();
+vi.}
+vii.} and another file, Salmon.java:
+viii.package animals.fish; 2.
+ix.public class Salmon extends Fish {
+x.void consume() { /* do stuff */ }
+xi.} Assume both classes are defined in the correct directories for theft packages, and that the Mammal class correctly defines the findSalmon() method. Which two changes allow this code to compile correctly? (Choose two.) A. add public to the start of line 4 in Salmon.java B. add public to the start of line 4 in GrizzlyBear.java C. add import animals.mammals.; at line 2 in Salmon.java D. add import animals.fish.; at line 2 in GrizzlyBear.java E. add import animals.fish.Salmon.; at line 2 in GrizzlyBear.java F. add import animals.mammals.GrizzlyBear.;at line 2 in Salmon.java
+1.package utils; 2.
+i.public class Repetition {
+ii.public static String twice(String s) { return s + s; }
+iii.} and given another class Demo:
+iv.// insert code here 2.
+v.public class Demo {
+vi.public static void main(String[] args) {
+vii.System.out.println(twice(”pizza”));
+viii.}
+ix.} Which code should be inserted at line 1 of Demo.java to compile and run Demo to print “pizzapizza”? A. import utils.; B. static import utils.; C. import utils.Repetition.*; D. static import utils.Repetition. *; E. import utils.Repetition.twice(); F. import static utils.Repetition.twice; G. static import utils.Repetition.twice;
+1.Given:
+i.interface DeclareStuff{
+ii.public static final int EASY = 3;
+iii.void doStuff(int t); }
+iv.public class TestDeclare implements DeclareStuff {
+v.public static void main(String [] args) {
+vi.int x=5;
+vii.new TestDeclare().doStuff(++x);
+viii.}
+ix.void doStuff(int s) {
+x.s += EASY + ++s;
+xi.System.out.println(”s “ + s);
+xii.}
+xiii.} What is the result? A. s 14 B. s 16 C. s 10 D. Compilation fails. E. An exception is thrown at runtime.
+1.Given:
+i.interface DoStuff2 {
+ii.float getRange(int low, int high); } 3.
+iii.interface DoMore {
+iv.float getAvg(int a, int b, int c); } 6.
+v.abstract class DoAbstract implements DoStuff2, DoMore { } 8.
+vi.class DoStuff implements DoStuff2 {
+vii.public float getRange(int x, int y) { return 3.14f; } } 11.
+viii.interface DoAll extends DoMore {
+ix.float getAvg(int a, int b, int c, int d); } What is the result? A. The file will compile without error. B. Compilation fails. Only line 7 contains an error. C. Compilation fails. Only line 12 contains an error. D. Compilation fails. Only line 13 contains an error. E. Compilation fails. Only lines 7 and 12 contain errors. F. Compilation fails. Only lines 7 and 13 contain errors. G. Compilation fails. Lines 7, 12, and 13 contain errors.
+1.Given:
+i.public class Counter {
+ii.public static void main(String[] args) {
+iii.int numArgs = /* insert code here */;
+iv.}
+v.} and the command line: java Counter one fred 42 Which code, inserted at line 13, captures the number of arguments passed into the program? A. args.count B. args.length C. args.count() D. args.length() E. args.getLength()
+1.Given the command line java Pass2 and:
+i.public class Pass2 {
+ii.public void main(String [] args) { 17.int x=6;
+iii.Pass2 p = new Pass2();
+iv.p.doStuff(x);
+v.System.out.print(” main x = “+ x);
+vi.} 22.
+vii.void doStuff(int x) {
+viii.System.out.print(” doStuffx = “+ x++);
+ix.}
+x.} What is the result? A. Compilation fails. B. An exception is thrown at runtime. C. doStuffx = 6 main x = 6 D. doStuffx = 6 main x = 7 E. doStuffx = 7 main x = 6 F. doStuffx = 7 main x = 7
+1.Given:
+i.public class Yippee {
+ii.public static void main(String [] args) {
+iii.for(int x = 1; x < args.length; x++) {
+iv.System.out.print(args[x] +“ “);
+v.}
+vi.}
+vii.} and two separate command line invocations: java Yippee java Yippee 1234 What is the result? A. No output is produced. 123 B. No output is produced. 234 C. No output is produced. 1234 D. An exception is thrown at runtime. 123 E. An exception is thrown at runtime. 234 F. An exception is thrown at rijntime. 1234
+1.Given:
+i.public class Yippee2 { 13.
+ii.static public void main(String [] yahoo) {
+iii.for(int x= 1; x<yahoo.length; x++) {
+iv.System.out.print(yahoo[x] + “ “);
+v.}
+vi.}
+vii.} and the command line invocation: java Yippee2 a b c What is the result? A.a b B.b c C.a b c D. Compilation fails. E. An exception is thrown at runtime.
+1.Click the Exhibit button.
+i.class Payload {
+ii.private int weight;
+iii.public Payload(int wt) { weight = wt; }
+iv.public void setWeight(mt w) { weight = w; }
+v.public String toString { return Integer.toString(weight); }
+vi.} 17.
+vii.public class TestPayload {
+viii.static void changePayload(Payload p) {
+ix./* insert code here */
+x.} 22.
+xi.public static void main(String[] args) {
+xii.Payload p = new Payload();
+xiii.p.setWeight(1024);
+xiv.changePayload(p);
+xv.System.out.println(”The value of p is “+ p);
+xvi.}
+xvii.} Which statement, placed at line 20, causes the code to print “The value of p is 420.”? A. p.setWeight(420); B. p.changePayload(420); C. p = new Payload(420); D. Payload.setWeight(420); E. p = Payload.setWeight(420); F. p = new Payload(); p.setWeight(420);
+1.Click the Exhibit button.
+i.public class Item {
+ii.private String desc;
+iii.public String getDescription() { return desc; }
+iv.public void setDescription(String d) { desc = d; } 5.
+v.public static void modifyDesc(Item item, String desc) {
+vi.item = new Item();
+vii.item.setDescription(desc);
+viii.}
+ix.public static void main(String[] args) {
+x.Item it = new Item();
+xi.it.setDescription(”Gobstopper”);
+xii.Item it2 = new Item();
+xiii.it2.setDescription(”Fizzylifting”);
+xiv.modifyDesc(it, “Scrumdiddlyumptious”);
+xv.System.out.println(it.getDescription());
+xvi.System.out.println(it2.getDescription());
+xvii.}
+xviii.} What is the outcome of the code? A. Compilation fails. B. Gobstopper Fizzylifting C. Gobstopper Scrumdiddlyumptious D. Scrumdiddlyumptious Fizzylifltng E. Scrumdiddlyumptious Scrumdiddlyumptious
